@@ -1,0 +1,22 @@
+.root {
+  margin: 50px 0;
+
+  .tag {
+    font-size: 16px;
+    position: sticky;
+    width: 200px;
+    height: 100px;
+    top: 50px;
+
+    .tagList {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+//@media screen and (max-width: 700px) {
+//  .wrapper {
+//    justify-content: center;
+//  }
+//}

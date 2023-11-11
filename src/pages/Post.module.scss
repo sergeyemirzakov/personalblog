@@ -1,0 +1,51 @@
+.root {
+  padding: 75px 0;
+
+  .header {
+    text-align: center;
+    .title {
+      margin: 10px 0;
+      font-size: 36px;
+      line-height: 1.2;
+    }
+
+    .date {
+      display: block;
+      font-size: 14px;
+    }
+  }
+
+  .content {
+    margin-top: 50px;
+    p {
+      margin: 20px 0;
+    }
+
+    h2 {
+      margin-top: 40px;
+      font-size: 22px;
+    }
+
+    ul {
+      margin: 20px;
+    }
+  }
+
+  p > img {
+    border-radius: 5px;
+    margin: 0 auto;
+  }
+
+  p > code {
+    background-color: #e7ebef;
+    border-radius: 5px;
+    padding: 2px 5px;
+    font-family: Menlo, Monaco, Consolas, 'Andale Mono', 'Ubuntu Mono', 'Courier New',
+      monospace;
+    font-size: 15px;
+  }
+}
+
+:global(html.dark) .content p > code {
+  background-color: #313236;
+}

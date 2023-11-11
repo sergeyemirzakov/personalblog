@@ -1,0 +1,24 @@
+@use '@/styles/variables.scss' as s;
+
+.root {
+  display: inline-flex;
+  background-color: s.$base-primary;
+  border: none;
+  color: white;
+  border-radius: 3px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:hover {
+    background-color: lighten(s.$base-primary, 5%);
+  }
+}
+
+:global(html.dark) .root {
+  color: s.$base-text-color;
+  background-color: s.$base-primary-dark;
+  &:hover {
+    background-color: darken(s.$base-primary-dark, 5%);
+  }
+}

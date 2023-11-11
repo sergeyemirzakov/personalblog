@@ -1,0 +1,16 @@
+@use '@/styles/variables.scss' as s;
+
+.root {
+  padding: 1px 5px;
+  font-size: 12px;
+  border-radius: 3px;
+  margin-right: 5px;
+  color: white;
+  display: inline-flex;
+  font-weight: 600;
+}
+
+:global(html.dark) .root {
+  filter: brightness(0.95);
+  filter: saturate(0.9);
+}

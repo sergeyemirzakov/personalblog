@@ -1,0 +1,7 @@
+.root {
+  color: #777777;
+}
+
+:global(html.dark) .root {
+  color: #b8b8b8
+}

@@ -1,0 +1,52 @@
+@use '@/styles/variables.scss' as s;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Source Serif 4', serif;
+  color: s.$base-text-color;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+html.dark body {
+  background-color: s.$base-background-dark;
+  color: s.$base-text-color-dark;
+}
+
+body a {
+  color: s.$base-primary;
+  text-decoration: none;
+}
+
+html.dark body a {
+  color: s.$base-primary-dark;
+}
+
+html.dark img {
+  filter: brightness(0.9);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+pre {
+  border-radius: 5px;
+  font-size: 15px !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+}
