@@ -11,6 +11,7 @@ body {
   color: s.$base-text-color;
   line-height: 1.5;
   font-size: 16px;
+  transition: all 0.2s;
 }
 
 html.dark body {
