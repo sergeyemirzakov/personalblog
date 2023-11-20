@@ -1,17 +1,18 @@
-import Link from "next/link";
-import React, { AnchorHTMLAttributes } from "react";
-import styles from './CustomLink.module.scss'
+import Link from 'next/link';
+import styles from './CustomLink.module.scss';
 
-interface CustomLinkProps extends AnchorHTMLAttributes<HTMLAnchorElement>{
+interface CustomLinkProps {
+  href: string;
   children: React.ReactNode;
+  target?: '_blank' | '_self';
 }
 
-const CustomLink = ({ children, ...props }: CustomLinkProps) => {
+const CustomLink = ({ children, href, target = '_self' }: CustomLinkProps) => {
   return (
-    <Link {...props} className={styles.root} href= {props.href || ''}>
+    <Link className={styles.root} href={href} target={target}>
       {children}
     </Link>
-  )
-}
+  );
+};
 
-export default CustomLink
+export default CustomLink;

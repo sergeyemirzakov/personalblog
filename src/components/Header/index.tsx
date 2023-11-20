@@ -11,8 +11,7 @@ import sound from '@/assets/sounds/toggler.mp3';
 
 import styles from './Header.module.scss';
 import { useRouter } from 'next/router';
-import style from 'react-syntax-highlighter/dist/esm/styles/hljs/a11y-dark';
-import CustomLink from '../UI/CustomLink';
+import DayAndNightSwitcher from '../UI/DayAndNightSwitcher';
 
 const Header = () => {
   const { colorMode, setColorMode } = React.useContext(theme);
@@ -31,15 +30,15 @@ const Header = () => {
       <Link className={styles.logo} href='/'>
         <Image className={styles.photo} src={photo} alt='Photo of the author' />
         <span className={styles.wrapper}>
-          <span className={styles.supHeader}>Front-end developer</span>
-          <span className={styles.title}>
-            {pathname === '/' ? 'Sergey Emirzakov' : '← Back to home'}
-          </span>
+        <span className={styles.supHeader}>Front-end developer</span>
+        <span className={styles.title}>
+          {pathname === '/' ? 'Sergey Emirzakov' : '← Back to home'}
         </span>
+      </span>
       </Link>
-      <button onClick={onColorModeHandler} className={styles.themeToggler}>
-        <Switch colorMode={colorMode} />
-      </button>
+      <div>
+        <DayAndNightSwitcher onChange={onColorModeHandler} colorMode={colorMode} />
+      </div>
     </header>
   );
 };

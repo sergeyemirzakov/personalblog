@@ -4,8 +4,6 @@ import { getAllPostIds, getPostData } from '@/lib/posts';
 import Head from 'next/head';
 import styles from './Post.module.scss';
 
-import ButtonLink from "@/components/UI/ButtonLink/ButtonLink";
-
 interface PostDataProps {
   postData: {
     title: string;

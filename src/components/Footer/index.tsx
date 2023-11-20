@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import styles from './Footer.module.scss';
 
 const Footer = () => {
@@ -7,8 +7,10 @@ const Footer = () => {
 
   return (
     <footer className={styles.root}>
-      <span>Sergey Emirzakov</span>
-      <span>2021 - {currentYear}</span>
+      <div style={{ display: 'flex', alignItems: 'center' }}>
+        <span>Sergey Emirzakov</span>
+      </div>
+      <span>2022 - {currentYear}</span>
     </footer>
   );
 };

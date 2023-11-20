@@ -1,4 +1,4 @@
-import { initColorMode } from '@/helpers/initColorMode';
+import { initColorMode } from '@/lib/initColorMode';
 import { Html, Head, Main, NextScript } from 'next/document';
 
 export default function Document() {

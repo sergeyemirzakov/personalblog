@@ -1,7 +1,7 @@
 import type { AppProps } from 'next/app';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
-import Overlay from '@/components/Overlay';
+import ProgressBar from '@/components/ProgressBar';
 import { ThemeProvider } from '@/context/themeContext';
 import '@/styles/globals.scss';
 import '@/styles/prism-vsc-dark-plus.css';
@@ -26,7 +26,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
   return (
     <ThemeProvider>
-      <Overlay loadingProgress={loadingProgress} />
+      <ProgressBar loadingProgress={loadingProgress} />
       <Component {...pageProps} />
     </ThemeProvider>
   );
