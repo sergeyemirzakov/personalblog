@@ -34,8 +34,8 @@ const Aboutme = () => {
           find some usefull stuff.
         </p>
         <p>
-          I cannot say that my article are excelent because I guess they don't cover the
-          topic 100%. But I'm trying! 😄
+          I cannot say that my article are excellent because I guess they do not cover the
+          topic 100%. But I am trying! 😄
         </p>
 
         <h1>Thank you ❤️</h1>
