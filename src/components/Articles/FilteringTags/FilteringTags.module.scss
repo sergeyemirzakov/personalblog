@@ -17,7 +17,8 @@
     overflow: hidden;
 
     &.active {
-      background-color: #2d4b75;
+      background-color: #5f789c;
+      color: white;
     }
 
     &:not(:last-child) {
