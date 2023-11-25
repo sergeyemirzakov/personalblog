@@ -30,15 +30,13 @@ const Header = () => {
       <Link className={styles.logo} href='/'>
         <Image className={styles.photo} src={photo} alt='Photo of the author' />
         <span className={styles.wrapper}>
-        <span className={styles.supHeader}>Front-end developer</span>
-        <span className={styles.title}>
-          {pathname === '/' ? 'Sergey Emirzakov' : '← Back to home'}
+          <span className={styles.supHeader}>Front-end developer</span>
+          <span className={styles.title}>
+            {pathname === '/' ? 'Sergey Emirzakov' : '← Back to home'}
+          </span>
         </span>
-      </span>
       </Link>
-      <div>
-        <DayAndNightSwitcher onChange={onColorModeHandler} colorMode={colorMode} />
-      </div>
+      <DayAndNightSwitcher onChange={onColorModeHandler} colorMode={colorMode} />
     </header>
   );
 };
