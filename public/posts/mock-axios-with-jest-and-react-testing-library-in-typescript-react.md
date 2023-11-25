@@ -1,14 +1,14 @@
 ---
 title: 'Mock axios with Jest and React Testing Library in Typescript'
-date: '2023-02-01'
+date: '2022-12-05'
 tags: 'React_Typescript_Testing'
 shortDescription: "Actually we really often face with a case when we need to mock some data and test it. Let's figure out how we can do it using axios."
 ---
 
-Probably each project has tests for some parts or even for all. 
-And that's why we have to able to write tests. Actually often case when we need to test some api and mock it. 
-At first glance, this looks like a rather complicated part, and we can find a lof of arcticle where authors advise using some libararies for that. 
-And some of them suggest really good solutions. For instance [Mock Server Worker](https://mswjs.io/). 
+Probably each project has tests for some parts or even for all.
+And that's why we have to able to write tests. Actually often case when we need to test some api and mock it.
+At first glance, this looks like a rather complicated part, and we can find a lof of arcticle where authors advise using some libararies for that.
+And some of them suggest really good solutions. For instance [Mock Server Worker](https://mswjs.io/).
 Take a look at this when you have some free time.
 
 But in this article I want to try to mock axios using Jest and don't have any additional dependencies.
@@ -29,35 +29,35 @@ npm install axios
 
 Fine! We did it!
 
-Let's create some components and implementing an api request. 
+Let's create some components and implementing an api request.
 I decided to use known to everyone service [JSON Placeholder](https://jsonplaceholder.typicode.com/) in order get users for our app.
 
-And my request looks like that: 
+And my request looks like that:
 
 ```ts
- const getUsers = async () => {
-    const url = 'https://jsonplaceholder.typicode.com/users';
+const getUsers = async () => {
+  const url = 'https://jsonplaceholder.typicode.com/users';
 
-    try {
-      setIsLoading(true);
-      const { data, status } = await axios.get(url);
-      const users = await data.map((user: UsersType) => {
-        return {
-          id: user.id,
-          name: user.name,
-        };
-      });
+  try {
+    setIsLoading(true);
+    const { data, status } = await axios.get(url);
+    const users = await data.map((user: UsersType) => {
+      return {
+        id: user.id,
+        name: user.name,
+      };
+    });
 
-      if (status !== 200) {
-        throw Error('Something went wrong');
-      }
-
-      setIsLoading(false);
-      setUsers(users);
-    } catch (err) {
-      setIsLoading(false);
+    if (status !== 200) {
+      throw Error('Something went wrong');
     }
-  };
+
+    setIsLoading(false);
+    setUsers(users);
+  } catch (err) {
+    setIsLoading(false);
+  }
+};
 ```
 
 And all together it looks like this:
@@ -115,10 +115,10 @@ const Users = () => {
 export default Users;
 ```
 
-Let's I explain what we have above. We already familiar with <code>getUsers</code> function and it makes a request to retrieve a list of users. 
+Let's I explain what we have above. We already familiar with <code>getUsers</code> function and it makes a request to retrieve a list of users.
 Then we set all users into <code>setUsers</code> and pass them like a props to the <code>UsersList</code> component.
 
-The <code>UsersList</code> component looks pretty easy: 
+The <code>UsersList</code> component looks pretty easy:
 
 ```tsx
 import { UsersType } from '..';
@@ -210,6 +210,7 @@ describe('App', () => {
   });
 });
 ```
+
 ![test-passes](/images/should-render-list-of-the-users-test-passes.jpg)
 
 And I believe that's it. Good luck with your experiments 🙌

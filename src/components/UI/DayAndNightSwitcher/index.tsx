@@ -6,8 +6,6 @@ interface DayAndNightSwitcherProps {
 const DayAndNightSwitcher = ({ colorMode, onChange }: DayAndNightSwitcherProps) => {
   if (!colorMode) return null;
 
-  console.log('colorMode: ', colorMode);
-
   return (
     <div className='toggleWrapper'>
       <input
