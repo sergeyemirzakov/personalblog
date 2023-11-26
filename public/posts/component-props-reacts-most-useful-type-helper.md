@@ -2,7 +2,7 @@
 title: 'ComponentProps or getting component props types in React'
 date: '2023-07-31'
 tags: 'React_Typescript'
-shortDescription: 'When you are a frontend developer you need to create some UI components really often. And despite of custom props for your components you want to use their default props.'
+shortDescription: 'When you want to use default props of HTML element with custom ones.'
 ---
 
 When you are a frontend developer you need to create some UI components really often. And despite of custom props for your components you want to use their default props.
