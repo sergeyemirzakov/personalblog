@@ -43,6 +43,7 @@
     margin: 0 auto;
   }
 
+  ul li code,
   p > code {
     background-color: #e7ebef;
     border-radius: 5px;
@@ -54,5 +55,9 @@
 }
 
 :global(html.dark) .content p > code {
+  background-color: #313236;
+}
+
+:global(html.dark) .content ul li code {
   background-color: #313236;
 }
