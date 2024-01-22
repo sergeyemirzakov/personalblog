@@ -1,7 +1,7 @@
 ---
 title: 'Using the HTML dialog element'
 date: '2023-10-20'
-tags: 'HTML_CSS'
+tags: 'HTML_CSS_JavaScript'
 shortDescription: "Dialogs are an integral part of any user interface, be it the web, mobile, or any other that exists today. Let's look at the advantages of the dialog element."
 ---
 

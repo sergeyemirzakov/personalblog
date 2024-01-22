@@ -7,6 +7,7 @@ export const matchColor = (tagName: string) => {
     Redux: '#764ABC',
     Testing: '#289b26',
     SASS: '#C56494',
+    JavaScript: '#d1aa2d',
   } as { [key: string]: string };
   return obj[tagName] || 'white';
 };
