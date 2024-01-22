@@ -19,9 +19,8 @@ const Aboutme = () => {
         </p>
         <p>I create products using TypeScript, React and its ecosystem.</p>
         <p>
-          I am currently based in Samarkand and work remotely. Native language is Russian
-          and English at B2 level, I believe in it 😄. In any case, there is always room
-          to grow!
+          Native language is Russian and English at B2 level, I believe in it 😄. In any
+          case, there is always room to grow!
         </p>
 
         <h1>Why did I start this blog?</h1>
